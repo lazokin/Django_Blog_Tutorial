@@ -1,0 +1,10 @@
+# vscode
+.vscode
+
+# python
+__pycache__/
+
+# django
+*.log
+local_settings.py
+db.sqlite3
