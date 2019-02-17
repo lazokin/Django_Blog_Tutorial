@@ -5,14 +5,14 @@
     <div class="content-section">
         <form method="POST" novalidate>
             {% csrf_token %}
-            <legend class="border-bottom mb-3">Join Today</legend>
+            <legend class="border-bottom mb-3">Login</legend>
             {{ form|crispy }}
             <div class="form-group">
-                <button type="submit" class="btn btn-outline-info">Register</button>
+                <button type="submit" class="btn btn-outline-info">Log In</button>
             </div>
         </form>
         <div class="border-top pt-3">
-            <small class="text-muted">Already have an account? <a href="{% url 'login' %}">Log In</a></small>
+            <small class="text-muted">Need an account? <a href="{% url 'register' %}">Register</a></small>
         </div>
     </div>
 {% endblock content %}
