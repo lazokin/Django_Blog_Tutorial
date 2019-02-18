@@ -5,10 +5,13 @@ verify_ssl = true
 
 [dev-packages]
 pylint = "*"
+pep8 = "*"
+flake8 = "*"
 
 [packages]
 django = "*"
 django-crispy-forms = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.7"
