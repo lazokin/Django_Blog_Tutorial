@@ -3,7 +3,7 @@
 
 {% block content %}
     <div class="content-section">
-        <form method="POST" novalidate>
+        <form method="POST">
             {% csrf_token %}
             <legend class="border-bottom mb-3">Login</legend>
             {{ form|crispy }}
