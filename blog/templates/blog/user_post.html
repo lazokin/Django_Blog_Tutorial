@@ -1,5 +1,6 @@
 {% extends "blog/base.html" %}
 {% block content %}
+    <h3 class="mb-3">Posts by {{ view.kwargs.username }} ({{ page_obj.paginator.count }})</h3>
     {% for post in posts %}
         <article class="media content-section">
             <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
@@ -13,7 +14,7 @@
         </article>
     {% endfor %}
     <nav>
-        <ul class="pagination">
+        <ul class="pagination mb-3">
             {% if page_obj.has_previous %}
                 <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
                 <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number}}">Previous</a></li>
@@ -32,5 +33,3 @@
         </ul>
     </nav>
 {% endblock content %}
-
-
